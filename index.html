@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Directives Scope</title>
+</head>
+  <body>
+    <div ng-app="myApp">
+      <div data-ng-controller="myController">
+        Span with no directive: <span>{{val}}</span>
+        <br><br>
+        Directive with no child scope: <span without-scope>{{val}}</span>
+        <br><br>
+        Directive with scope set to true: <span with-scope>{{val}}</span>
+        <br><br>
+        Directive with isolated scope: <span new-scope>{{val}}</span>
+        <br><br>
+        Directive with isolated scope/new scope: <span new-scope val='val'>{{$parent.val}}</span>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
